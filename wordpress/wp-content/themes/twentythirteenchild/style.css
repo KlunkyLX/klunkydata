@@ -1,0 +1,15 @@
+/*
+Theme Name:     TwentyThirteenChild
+Description:    Child theme for 2013
+Author:         tristan
+Template:       twentythirteen
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+    /* ======================= Full Width Page ===============*/
+
+    .entry-header-full, .entry-content-full {
+    margin: 0 auto;
+    max-width: 1040px;
+    }

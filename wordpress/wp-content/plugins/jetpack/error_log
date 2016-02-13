@@ -1,0 +1,2 @@
+[04-Feb-2016 08:25:15 America/Chicago] PHP Warning:  require_once(ABSPATHWPINC/class-IXR.php): failed to open stream: No such file or directory in /home2/klunkyda/public_html/wp-content/plugins/jetpack/class.jetpack-ixr-client.php on line 3
+[04-Feb-2016 08:25:15 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'ABSPATHWPINC/class-IXR.php' (include_path='.:/opt/php54/lib/php') in /home2/klunkyda/public_html/wp-content/plugins/jetpack/class.jetpack-ixr-client.php on line 3
