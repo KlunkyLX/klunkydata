@@ -160,7 +160,6 @@
        "width": iconW,
        "xlink:href": function(d) {return "/visualizations/premRelative201516/icons/" + d.key + ".png";}	// local
        /*"xlink:href": function(d) {return "/icons/" + d.key + ".png";}*/	//	wwww
-       //"r": ((w / clubs.length) - iconBndPddng) / 2
       });
 
   // Define initial labels.
@@ -192,7 +191,11 @@
           //.attr("y", function(d) {return yScale(d.pstn[cntr] - 0.5);})  // vrtcl pstn
           .attr({
          "x": function(d, i) {return xScale(i);},  // hrzntl pstn
-         "y": function(d) {return yScale(d.pstn[cntr] - 0.5);}  // vrtcl pstn
+         "y": function(d) {return yScale(d.pstn[cntr] - 0.5);},  // vrtcl pstn
+          "height": iconH,
+          "width": iconW,
+          "xlink:href": function(d) {return "/visualizations/premRelative201516/icons/" + d.key + ".png";} // local
+          /*"xlink:href": function(d) {return "/icons/" + d.key + ".png";}*/ //  wwww
           });
           cntr++;
      });
