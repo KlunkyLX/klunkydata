@@ -15,43 +15,63 @@
     <body>
         <div class="container-fluid">
             
-			<div class="banner">
-				<div class="row">
-					<div class="col-md-1"><!-- indnt a col -->
-					</div>
-					<div class="col-md-8 text-left">
-						<h1>klunky data</h1>
-						<h5>data, klunked!</h3>	<!-- TODO: align right -->
-					</div>
-					<div class="col-md-3">
-						<img class="img-responsive" src="http://placehold.it/80x70" alt"klunky logo">
-					</div>
-				</div>
-			</div>
+      <div class="banner">
+        <div class="row">
+          <div class="col-md-3 text-right">
+            <h1>klunky data</h1>
+            <h5>data, klunked!</h5>
+          </div>
+          <div class="col-md-5"></div>
+          <div class="col-md-1">
+            <div class="extnl_lnks">
+              <div class="extnl_lnk">
+                <a href="https://twitter.com/KlunkyData"><img class="img-responsive" src="TwitterLogo_blue.png" alt="twitter image" width="32" height"32"></a><!-- min 16px -->
+              </div>
+              <div class="extnl_lnk">
+                <a href="https://github.com/klunkydata"><img class="img-responsive" src="GitHub-Mark-32px.png" alt="GitHub image"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1 text-right"></div>
+          <div class="col-md-8 text-right">
+            <hr size="200"><!-- TODO: refact -->
+          </div>
+        </div>
+      </div>
 			
 			<div class="home">	<!-- TODO: refact -->
 				<div class="row">
 					<div class="col-md-12 text-left">
-						<p><a href="index.html">Home</a></p>
+						<p><a href="index.html">Back to the home page</a></p>
 					</div>
 				</div>
 			</div>
 			
-			<div class="viz">
+			<div class="title">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h1>A Trivial Relative Journey Through the 2015/ 16 Premiership</h1>
-					</div>
-					<div class="col-md-12">
-						<div class="viz">
-							<p>Viz</p>
-						</div>
-					</div>
+            <h1>A Trivial Relative Journey Through the 2015/ 16 Premiership</h1>
+              <center>
+                <a href="https://github.com/klunkydata/premRelative201516"><img class="img-responsive" src="GitHub-Mark-32px.png" alt="GitHub image"></a>
+              </center>
+          </div>
 				</div>
 			</div>
-		</div>	<!-- container-fluid -->
-			
-		<script type="text/javascript">
+
+      <div class="button">
+        <div class="row">
+          <div class="col-md-12 text-left">
+            <h4>Click here to iterate through events.</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="viz">
+        <div class="row">
+          <div class="col-md-12">
+            <script type="text/javascript">
   //--------------------------------------------------------------------------------//
   //-------------------------------- d3 block start --------------------------------//
   //--------------------------------------------------------------------------------//
@@ -60,7 +80,7 @@
   //--------------------------------------------------------------------------------//
   var Viz = {}; // dclre empty glbl objct
   Viz.pstnsCSV = "/visualizations/premRelative201516/prem1516pstns20160126.csv"; // local, 24th Jan
-  //Viz.pstnsCSV = "prem1516pstns20160126.csv"; // www, 24th Jan
+  //Viz.pstnsCSV = "/vzltns/prem1516/prem1516pstns20160126.csv"; // www, 24th Jan
   Viz.format = d3.time.format("%Y-%m-%d %H:%M:%S"); // evnt prsr
   var clubs = [{}]; // move into mthd scope once wrkng
   var dataset; // move into mthd scope once wrkng
@@ -158,8 +178,8 @@
        //"height": function(d) {return (d.h / 100) * ;},
        "height": iconH,
        "width": iconW,
-       "xlink:href": function(d) {return "/visualizations/premRelative201516/icons/" + d.key + ".png";}	// local
-       /*"xlink:href": function(d) {return "/icons/" + d.key + ".png";}*/	//	wwww
+       "xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";}	// local
+       /*"xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";}*/	//	wwww
       });
 
   // Define initial labels.
@@ -181,7 +201,7 @@
 
   // Define event listener.
   var cntr = 1;  // strt at scnd row
-  d3.select("p")
+  d3.select("h4")
     .on("click", function() { // do smethng on clck
       // Upte icon pstns.
       svg.selectAll("image")
@@ -194,8 +214,8 @@
          "y": function(d) {return yScale(d.pstn[cntr] - 0.5);},  // vrtcl pstn
           "height": iconH,
           "width": iconW,
-          "xlink:href": function(d) {return "/visualizations/premRelative201516/icons/" + d.key + ".png";} // local
-          /*"xlink:href": function(d) {return "/icons/" + d.key + ".png";}*/ //  wwww
+          "xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";} // local
+          /*"xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";}*/ //  wwww
           });
           cntr++;
      });
@@ -327,6 +347,11 @@
   //--------------------------------------------------------------------------------//
   //--------------------------------- d3 block end ---------------------------------//
   //--------------------------------------------------------------------------------//   
-		</script>
+             </script>
+          </div>
+        </div>
+      </div>
+    
+    </div>  <!-- container-fluid -->
     </body>
 </html>

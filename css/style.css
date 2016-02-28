@@ -9,6 +9,15 @@ box-sizing: border-box;
 }
 body {
 	font-family: 'Roboto Slab', serif;
-	color: #747704;
+	color: #00000;	/* black */
 	font-weight: 400;
+}
+.extnl_lnks {
+	display: -webkit-flex;
+	display: flex;
+	margin-right: 0px;
+	margin-top: 30px;
+}
+.extnl_lnk {
+	margin-right: 15px;
 }
