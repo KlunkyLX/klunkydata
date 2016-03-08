@@ -12,6 +12,12 @@ body {
 	color: #00000;	/* black */
 	font-weight: 400;
 }
+a {
+  color: black;
+}
+.viz {
+	font-family: 'Raleway', sans-serif;
+}
 .extnl_lnks {
 	display: -webkit-flex;
 	display: flex;
@@ -20,4 +26,30 @@ body {
 }
 .extnl_lnk {
 	margin-right: 15px;
+}
+.axis {
+	font-family: 'Raleway', sans-serif;
+	fill: gray;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.axis .halo {
+	stroke: gray;
+	stroke-width: 4px;
+	stroke-linecap: round;
+}
+
+.slider .handle path {
+	stroke: black;
+	stroke-width: 3px;
+	stroke-linecap: round;
+	pointer-events: none;
+}
+
+.slider .handle text {	
+	font-family: 'Raleway', sans-serif;
+	fill: black;
+	text-align: center;
+	font-size: 18px;
 }
