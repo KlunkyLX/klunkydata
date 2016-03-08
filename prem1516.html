@@ -13,8 +13,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/frameworks/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/websites/klunkydata/css/style.css">
-		<!-- www <link rel="stylesheet" href="/css/style.css"> -->
+		<!-- local <link rel="stylesheet" href="/websites/klunkydata/css/style.css"> -->
+		<link rel="stylesheet" href="/css/style.css">
 		<script type="text/javascript" src="/libraries/d3/d3.min.js"></script>
     </head>
     <body>
@@ -83,8 +83,8 @@
   // Global Vrbles
   //--------------------------------------------------------------------------------//
   var Viz = {}; // dclre empty glbl objct
-  Viz.pstnsCSV = "/visualizations/premRelative201516/prem1516pstns20160126.csv"; // local, 24th Jan
-  //Viz.pstnsCSV = "/vzltns/prem1516/prem1516pstns20160126.csv"; // www, 24th Jan
+  //Viz.pstnsCSV = "/visualizations/premRelative201516/prem1516pstns20160126.csv"; // local, 24th Jan
+  Viz.pstnsCSV = "/vzltns/prem1516/prem1516pstns20160126.csv"; // www, 24th Jan
   Viz.formatDate = d3.time.format("%Y-%m-%d %H:%M:%S"); // evnt prsr
   //Viz.formatDate = d3.time.format("%b %d %H:%M:%S"); // sldr frmt
   var clubs = [{}]; // move into mthd scope once wrkng
@@ -188,8 +188,8 @@
        //"height": function(d) {return (d.h / 100) * ;},
        "height": iconH,
        "width": iconW,
-       "xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";}	// local
-       /*"xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";}*/	//	wwww
+       /*"xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";}*/	// local
+       "xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";}	//	wwww
       });
 
   // Define initial labels.
@@ -222,8 +222,8 @@
          "y": function(d) {return yScale(d.pstn[cntr] - 0.5);},  // vrtcl pstn
           "height": iconH,
           "width": iconW,
-          "xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";} // local
-          /*"xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";}*/ //  wwww
+          /*"xlink:href": function(d) {return "/websites/klunkydata/vzltns/prem1516/icons/" + d.key + ".png";}*/ // local
+          "xlink:href": function(d) {return "/vzltns/prem1516/icons/" + d.key + ".png";} //  wwww
           });
           cntr++;
      });
